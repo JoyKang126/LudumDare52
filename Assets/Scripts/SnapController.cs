@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SnapController : MonoBehaviour
 {
     public List<Tile> snapPoints;
     public List<DraggableItem> draggableObjects;
-    public float snapRange = 0.5f;
+    public float snapRange = 0.7f;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +59,7 @@ public class SnapController : MonoBehaviour
         }
         if(!emptySpot)
         {
-            //next level
+            SceneManager.LoadScene("Scenes/SampleScene");
             Debug.Log("win!");
         }
     }
