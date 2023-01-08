@@ -32,17 +32,25 @@ public class SnapController : MonoBehaviour
             }
         }
 
-        if (closestSnapPoint != null && draggable.validSpot && !closestSnapPoint.isOccupied && closestDistance <= snapRange)
+        if (closestSnapPoint != null && draggable.validSpot && draggable.CheckSnaps() && closestDistance <= snapRange)
         {
             Vector3 offset = draggable.transform.position - draggable.transform.GetChild(0).position;
             draggable.transform.position = closestSnapPoint.transform.position + offset;
 
             draggable.AddSnaps();
+            draggable.snappedToLast.Clear();
             CheckEndState();
         }
         else if (!draggable.notInBarn)
         {
+            //teleport, isn't triggering on triggerexit
             draggable.transform.position = draggable.lastPosition;
+            foreach(Tile tile in draggable.snappedToLast)
+            {
+                Debug.Log("na na na");
+                draggable.snappedTo.Add(tile);
+            }
+            draggable.snappedToLast.Clear();
         }
     }
 

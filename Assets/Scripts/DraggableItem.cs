@@ -13,6 +13,7 @@ public class DraggableItem : MonoBehaviour
     public Vector3 lastPosition;
     public List<Collider2D> collideWith;
     public List<Tile> snappedTo;
+    public List<Tile> snappedToLast;
     [SerializeField] private int size;
 
     public bool validSpot; 
@@ -25,6 +26,10 @@ public class DraggableItem : MonoBehaviour
         mouseDragStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         spriteDragStartPosition = transform.localPosition;
         lastPosition = transform.localPosition;    
+        foreach(Tile tile in snappedTo)
+        {
+            snappedToLast.Add(tile);
+        }
         if (snappedTo.Count > 0)
         {
                 DeleteSnaps();
@@ -68,7 +73,7 @@ public class DraggableItem : MonoBehaviour
         dragEndedCallback(this);
     }
 
-    private void OnTriggerEnter2D(Collider2D other) 
+    private void OnTriggerStay2D(Collider2D other) 
     {
         if (!collideWith.Contains(other))
         {
@@ -79,6 +84,18 @@ public class DraggableItem : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) 
     {
         collideWith.Remove(other);
+    }
+
+    public bool CheckSnaps()
+    {
+        foreach (Collider2D tile in collideWith)
+        {
+            if (tile.gameObject.GetComponent<Tile>().isOccupied == true)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void AddSnaps()
