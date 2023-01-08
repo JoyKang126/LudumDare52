@@ -7,7 +7,7 @@ public class SnapController : MonoBehaviour
 {
     public List<Tile> snapPoints;
     public List<DraggableItem> draggableObjects;
-    public float snapRange = 0.7f;
+    public float snapRange = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +32,7 @@ public class SnapController : MonoBehaviour
             }
         }
 
-        if (closestSnapPoint != null && draggable.validSpot && draggable.CheckSnaps() && closestDistance <= snapRange)
+        if (closestSnapPoint != null && draggable.validSpot && draggable.CheckSnaps() && draggable.CheckTags() && closestDistance <= snapRange)
         {
             Vector3 offset = draggable.transform.position - draggable.transform.GetChild(0).position;
             draggable.transform.position = closestSnapPoint.transform.position + offset;
@@ -47,9 +47,16 @@ public class SnapController : MonoBehaviour
             draggable.transform.position = draggable.lastPosition;
             foreach(Tile tile in draggable.snappedToLast)
             {
-                Debug.Log("na na na");
                 draggable.snappedTo.Add(tile);
+                tile.gameObject.GetComponent<Tile>().isOccupied = true;
+                tile.gameObject.GetComponent<Tile>().tiletag = draggable.transform.gameObject.tag;
             }
+            draggable.snappedToLast.Clear();
+        }
+        else
+        {
+            draggable.transform.localScale = new Vector3(0.5f,0.5f,1);
+            draggable.transform.position = draggable.startPosition;
             draggable.snappedToLast.Clear();
         }
     }

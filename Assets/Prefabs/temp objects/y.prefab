@@ -100,10 +100,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: 0, y: 0, z: 0}
   collideWith: []
   snappedTo: []
-  size: 5
+  snappedToLast: []
+  size: 6
   validSpot: 0
+  notInBarn: 0
 --- !u!60 &2248623221045425502
 PolygonCollider2D:
   m_ObjectHideFlags: 0
