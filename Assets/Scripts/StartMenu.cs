@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
     public AudioManager audioManager;
-    public void StartGame(int sceneID)
+    public void StartGame(string sceneName)
     {
         Time.timeScale = 1f;
         audioManager.Play("button");
-        SceneManager.LoadScene(sceneID);
+        SceneManager.LoadScene(sceneName);
     }
 
     public void NextLevel()
