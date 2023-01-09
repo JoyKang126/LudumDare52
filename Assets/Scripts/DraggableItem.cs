@@ -11,21 +11,30 @@ public class DraggableItem : MonoBehaviour
     private Vector3 mouseDragStartPosition;
     private Vector3 spriteDragStartPosition;
     public Vector3 lastPosition;
+    public Vector3 startPosition;
     public List<Collider2D> collideWith;
     public List<Tile> snappedTo;
     public List<Tile> snappedToLast;
+    public AudioManager audioMan;
     [SerializeField] private int size;
 
     public bool validSpot; 
     public bool notInBarn;
 
+    void Awake()
+    {
+        startPosition = transform.position;
+    }
+
     private void OnMouseDown() 
     {
         isDragged = true;
         gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        audioMan.Play("choose");
         mouseDragStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.localScale = new Vector3(1,1,1);
         spriteDragStartPosition = transform.localPosition;
-        lastPosition = transform.localPosition;    
+        lastPosition = transform.position;    
         foreach(Tile tile in snappedTo)
         {
             snappedToLast.Add(tile);
@@ -92,10 +101,22 @@ public class DraggableItem : MonoBehaviour
         {
             if (tile.gameObject.GetComponent<Tile>().isOccupied == true)
             {
-                return false;
+                return false; //tile already occupied
             }
         }
-        return true;
+        return true; //tiles are all free, valid spot
+    }
+
+    public bool CheckTags()
+    {
+        foreach (Collider2D tile in collideWith)
+        {
+            if (tile.gameObject.GetComponent<Tile>().willTheyFight(gameObject.tag))
+            {
+                return false; //can't be next to this tile
+            }
+        }
+        return true; //no offending tiles, valid spot
     }
 
     public void AddSnaps()
@@ -103,6 +124,7 @@ public class DraggableItem : MonoBehaviour
         foreach (Collider2D tile in collideWith)
         {
             tile.gameObject.GetComponent<Tile>().isOccupied = true;
+            tile.gameObject.GetComponent<Tile>().tiletag = gameObject.tag;
             snappedTo.Add(tile.gameObject.GetComponent<Tile>());
         }
     }
@@ -112,6 +134,7 @@ public class DraggableItem : MonoBehaviour
         foreach (Collider2D tile in collideWith)
         {
             tile.gameObject.GetComponent<Tile>().isOccupied = false;
+            tile.gameObject.GetComponent<Tile>().tiletag = "";
             snappedTo.Remove(tile.gameObject.GetComponent<Tile>());
         }
     }
