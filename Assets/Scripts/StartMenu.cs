@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    public void StartGame(int sceneID)
+    public void StartGame(string sceneName)
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(sceneID);
+        SceneManager.LoadScene(sceneName);
     }
 }
