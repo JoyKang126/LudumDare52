@@ -2042,7 +2042,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 960883747}
-  audioManager: {fileID: 1164012284}
 --- !u!1 &443066757
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,7 +2331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9feffa767860d84fbc2e3edf67a6707, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 1164012284}
 --- !u!1 &482589471
 GameObject:
   m_ObjectHideFlags: 0
@@ -4771,6 +4769,10 @@ PrefabInstance:
       value: -204
       objectReference: {fileID: 0}
     - target: {fileID: 1252321459630689121, guid: f0acc5b2004af16489e1691abed92ebd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252321459630689121, guid: f0acc5b2004af16489e1691abed92ebd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1017756846}
@@ -6039,7 +6041,6 @@ MonoBehaviour:
   - {fileID: 6338724}
   - {fileID: 1750889734}
   snapRange: 0.4
-  audioManager: {fileID: 1164012284}
   levelClearWindow: {fileID: 207079821}
 --- !u!4 &1605572065
 Transform:

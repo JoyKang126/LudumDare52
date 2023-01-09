@@ -21,10 +21,10 @@ public class PauseMenu : MonoBehaviour
     FindObjectOfType<AudioManager>().Play("button");
   }
 
-  public void Quit(int sceneID)
+  public void Quit()
   {
     Time.timeScale = 1f;
     FindObjectOfType<AudioManager>().Play("button");
-    SceneManager.LoadScene(sceneID);
+    SceneManager.LoadScene("StartScene");
   }
 }
