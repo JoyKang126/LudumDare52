@@ -7,8 +7,9 @@ public class SnapController : MonoBehaviour
 {
     public List<Tile> snapPoints;
     public List<DraggableItem> draggableObjects;
-    public float snapRange = 0.5f;
+    public float snapRange = 0.4f;
     public AudioManager audioManager;
+    public GameObject levelClearWindow;
 
     private bool tagClash;
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class SnapController : MonoBehaviour
         {
             draggable.dragEndedCallback = OnDragEnded;
         }
+        levelClearWindow.SetActive(false);
     }
 
     private void OnDragEnded(DraggableItem draggable)
@@ -45,8 +47,9 @@ public class SnapController : MonoBehaviour
             audioManager.Play("fart");
         }
 
-        if (closestSnapPoint != null && draggable.validSpot && draggable.CheckSnaps() && tagClash && closestDistance <= snapRange)
+        if (closestSnapPoint != null && draggable.validSpot && draggable.CheckSnaps() && tagClash && closestDistance <= snapRange) //snap to new position
         {
+            Debug.Log(closestDistance);
             audioManager.Play("snap");
             Vector3 offset = draggable.transform.position - draggable.transform.GetChild(0).position;
             draggable.transform.position = closestSnapPoint.transform.position + offset;
@@ -55,12 +58,16 @@ public class SnapController : MonoBehaviour
             draggable.snappedToLast.Clear();
             CheckEndState();
         }
-        else if (!draggable.notInBarn)
+        else if (!draggable.notInBarn) //go back to last position
         {
+            Debug.Log(closestDistance);
+            Debug.Log(snapRange);
+            
+            draggable.transform.rotation = draggable.lastRotation;
             //teleport, isn't triggering on triggerexit
             if (draggable.lastPosition == draggable.startPosition)
             {
-                draggable.transform.localScale = new Vector3(0.5f,0.5f,1);
+                draggable.transform.localScale = new Vector3(0.7f,0.7f,1);
             }
             draggable.transform.position = draggable.lastPosition;
             foreach(Tile tile in draggable.snappedToLast)
@@ -71,9 +78,10 @@ public class SnapController : MonoBehaviour
             }
             draggable.snappedToLast.Clear();
         }
-        else
+        else //go back to start position
         {
-            draggable.transform.localScale = new Vector3(0.5f,0.5f,1);
+            draggable.transform.rotation = draggable.lastRotation;
+            draggable.transform.localScale = new Vector3(0.7f,0.7f,1);
             draggable.transform.position = draggable.startPosition;
             draggable.snappedToLast.Clear();
         }
@@ -90,10 +98,9 @@ public class SnapController : MonoBehaviour
                 break;
             }
         }
-        if(!emptySpot)
+        if(!emptySpot) //beary good and load next scene
         {
-            SceneManager.LoadScene("Scenes/SampleScene");
-            Debug.Log("win!");
+            levelClearWindow.SetActive(true);
         }
     }
 }

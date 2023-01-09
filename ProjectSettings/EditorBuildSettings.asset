@@ -8,34 +8,52 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PauseScene.unity
     guid: 8328a7d2cdcec6e48866c99c7d38322e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StartScene.unity
     guid: 33f4deb94c893f1418fbe34394a7879c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Intro/01_IntroScene.unity
     guid: ae909c473b124524ba05c2b41e092c3f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/NewFeatureScene.unity
     guid: 2db570bfafc3e694daa4ecfe05c5a1a8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LevelClearScene.unity
     guid: 5cebc0d63e000194bb2d7f073381d45f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/EndScene.unity
     guid: 5f9483ef2557b174686e97c8c7553f77
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Intro/02_IntroScene.unity
     guid: 1b8beeaf6656fb04aae74e1c7f2574d8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Intro/03_IntroScene.unity
     guid: c2c1d21652eeacd4d9b3f14972485416
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Intro/04_IntroScene.unity
     guid: 502c0db19c83d8846846e8f8716d393a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Intro/05_IntroScene.unity
     guid: a29cf9cd1f48dc64ab15e9fd77fdab74
+  - enabled: 1
+    path: Assets/Scenes/level1.unity
+    guid: 2c3db517ab5bf1946b90cdaefe3320be
+  - enabled: 1
+    path: Assets/Scenes/level2.unity
+    guid: ae45db4e0effbe7489b07afd880c100a
+  - enabled: 1
+    path: Assets/Scenes/level3.unity
+    guid: 8ad3f8192bb749f45a602d94dc2a5fab
+  - enabled: 1
+    path: Assets/Scenes/level4.unity
+    guid: 8fac3d9c4cb0b3044ac94c7955262a7f
+  - enabled: 1
+    path: Assets/Scenes/level5.unity
+    guid: c7add58034c4ed3438210a2ed33938e1
+  - enabled: 1
+    path: Assets/Scenes/level6.unity
+    guid: b9baf2cec9a618d45bc86f0a05b32f5f
   m_configObjects: {}
