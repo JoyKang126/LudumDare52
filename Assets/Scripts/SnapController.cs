@@ -48,7 +48,7 @@ public class SnapController : MonoBehaviour
 
         if (closestSnapPoint != null && draggable.validSpot && draggable.CheckSnaps() && tagClash && closestDistance <= snapRange) //snap to new position
         {
-            FindObjectOfType<AudioMansssssssssssssssssssssssssssssssssssssager>().Play("snap");
+            FindObjectOfType<AudioManager>().Play("snap");
             Vector3 offset = draggable.transform.position - draggable.transform.GetChild(0).position;
             draggable.transform.position = closestSnapPoint.transform.position + offset;
 
