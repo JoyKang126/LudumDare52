@@ -12,6 +12,7 @@ public class DraggableItem : MonoBehaviour
     private Vector3 spriteDragStartPosition;
     public Vector3 lastPosition;
     public Vector3 startPosition;
+    public Quaternion lastRotation;
     public List<Collider2D> collideWith;
     public List<Tile> snappedTo;
     public List<Tile> snappedToLast;
@@ -33,6 +34,7 @@ public class DraggableItem : MonoBehaviour
         audioMan.Play("choose");
         mouseDragStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.localScale = new Vector3(1,1,1);
+        lastRotation = transform.rotation;
         spriteDragStartPosition = transform.localPosition;
         lastPosition = transform.position;    
         foreach(Tile tile in snappedTo)

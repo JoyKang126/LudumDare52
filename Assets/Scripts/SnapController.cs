@@ -59,6 +59,7 @@ public class SnapController : MonoBehaviour
         }
         else if (!draggable.notInBarn) //go back to last position
         {
+            draggable.transform.rotation = draggable.lastRotation;
             //teleport, isn't triggering on triggerexit
             if (draggable.lastPosition == draggable.startPosition)
             {
@@ -75,6 +76,7 @@ public class SnapController : MonoBehaviour
         }
         else //go back to start position
         {
+            draggable.transform.rotation = draggable.lastRotation;
             draggable.transform.localScale = new Vector3(0.7f,0.7f,1);
             draggable.transform.position = draggable.startPosition;
             draggable.snappedToLast.Clear();
