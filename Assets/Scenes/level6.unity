@@ -366,7 +366,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &39807090
 Rigidbody2D:
   serializedVersion: 4
@@ -584,7 +584,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &63919444
 Rigidbody2D:
   serializedVersion: 4
@@ -726,7 +726,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &101969175
 Rigidbody2D:
   serializedVersion: 4
@@ -1027,7 +1027,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000047683716, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!1 &173220794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,7 +1078,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &173220797
 Rigidbody2D:
   serializedVersion: 4
@@ -1465,7 +1465,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &409895141
 Rigidbody2D:
   serializedVersion: 4
@@ -1698,7 +1698,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!4 &419546702 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 276073880489029407, guid: d58b0b920a987674fae274d16b6789b7, type: 3}
@@ -1765,7 +1765,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &423071446
 Rigidbody2D:
   serializedVersion: 4
@@ -2005,6 +2005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 960883747}
+  audioManager: {fileID: 1164012284}
 --- !u!1 &443066757
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,7 +2056,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &443066760
 Rigidbody2D:
   serializedVersion: 4
@@ -2294,6 +2295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9feffa767860d84fbc2e3edf67a6707, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 1164012284}
 --- !u!1 &482589471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,7 +2346,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &482589474
 Rigidbody2D:
   serializedVersion: 4
@@ -2586,7 +2588,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &560221830
 Rigidbody2D:
   serializedVersion: 4
@@ -2819,7 +2821,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!1 &672209703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2870,7 +2872,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &672209706
 Rigidbody2D:
   serializedVersion: 4
@@ -3199,7 +3201,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &850814206
 Rigidbody2D:
   serializedVersion: 4
@@ -3373,7 +3375,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &896778154
 Rigidbody2D:
   serializedVersion: 4
@@ -3606,7 +3608,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.0000009536743, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!1 &948333814
 GameObject:
   m_ObjectHideFlags: 0
@@ -3657,7 +3659,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &948333817
 Rigidbody2D:
   serializedVersion: 4
@@ -3879,7 +3881,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &977434150
 Rigidbody2D:
   serializedVersion: 4
@@ -4036,7 +4038,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &1024119853
 Rigidbody2D:
   serializedVersion: 4
@@ -4178,7 +4180,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &1050252641
 Rigidbody2D:
   serializedVersion: 4
@@ -4411,7 +4413,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.0000009536743, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!1 &1089938582
 GameObject:
   m_ObjectHideFlags: 0
@@ -4462,7 +4464,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &1089938585
 Rigidbody2D:
   serializedVersion: 4
@@ -4756,11 +4758,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3253452974645124237, guid: de63a830f98fa0f4abca8baec7003fee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.05
+      value: 1.04
       objectReference: {fileID: 0}
     - target: {fileID: 3253452974645124237, guid: de63a830f98fa0f4abca8baec7003fee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.97
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3253452974645124237, guid: de63a830f98fa0f4abca8baec7003fee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5143,7 +5145,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &1387991761
 Rigidbody2D:
   serializedVersion: 4
@@ -5285,7 +5287,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &1441570660
 Rigidbody2D:
   serializedVersion: 4
@@ -5427,7 +5429,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &1445841105
 Rigidbody2D:
   serializedVersion: 4
@@ -5569,7 +5571,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &1500926078
 Rigidbody2D:
   serializedVersion: 4
@@ -5722,19 +5724,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1294851236755804178, guid: 8ee66f7fd65aecd43bfa84f60db14b6f, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1294851236755804178, guid: 8ee66f7fd65aecd43bfa84f60db14b6f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1294851236755804178, guid: 8ee66f7fd65aecd43bfa84f60db14b6f, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1294851236755804178, guid: 8ee66f7fd65aecd43bfa84f60db14b6f, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1294851236755804178, guid: 8ee66f7fd65aecd43bfa84f60db14b6f, type: 3}
       propertyPath: m_SizeDelta.x
@@ -5774,11 +5776,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1294851236755804178, guid: 8ee66f7fd65aecd43bfa84f60db14b6f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -569
+      value: 73
       objectReference: {fileID: 0}
     - target: {fileID: 1294851236755804178, guid: 8ee66f7fd65aecd43bfa84f60db14b6f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 285
+      value: -77
       objectReference: {fileID: 0}
     - target: {fileID: 1294851236755804178, guid: 8ee66f7fd65aecd43bfa84f60db14b6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5796,6 +5798,10 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 960883747}
+    - target: {fileID: 1294851236755804190, guid: 8ee66f7fd65aecd43bfa84f60db14b6f, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1164012284}
     - target: {fileID: 1294851236755804191, guid: 8ee66f7fd65aecd43bfa84f60db14b6f, type: 3}
       propertyPath: m_Name
       value: Pause Button
@@ -5878,7 +5884,7 @@ MonoBehaviour:
   - {fileID: 1185505}
   - {fileID: 419546704}
   - {fileID: 1648456091}
-  snapRange: 0.5
+  snapRange: 0.4
   audioManager: {fileID: 1164012284}
   levelClearWindow: {fileID: 207079821}
 --- !u!4 &1605572065
@@ -6225,6 +6231,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5418483408872748272, guid: cab576dfa94d88f4dbcb516d62ed0057, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418483408872748272, guid: cab576dfa94d88f4dbcb516d62ed0057, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cab576dfa94d88f4dbcb516d62ed0057, type: 3}
 --- !u!114 &1717877457 stripped
@@ -6293,7 +6307,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &1723400878
 Rigidbody2D:
   serializedVersion: 4
@@ -6435,7 +6449,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &1750152619
 Rigidbody2D:
   serializedVersion: 4
@@ -6668,7 +6682,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!1001 &1840048460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6891,7 +6905,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &1954477968
 Rigidbody2D:
   serializedVersion: 4
@@ -7124,7 +7138,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000047683716, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!1 &1977921886
 GameObject:
   m_ObjectHideFlags: 0
@@ -7175,7 +7189,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &1977921889
 Rigidbody2D:
   serializedVersion: 4
@@ -7333,7 +7347,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &2079670057
 Rigidbody2D:
   serializedVersion: 4
@@ -7542,7 +7556,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &2119804909
 Rigidbody2D:
   serializedVersion: 4
@@ -7790,5 +7804,9 @@ PrefabInstance:
       propertyPath: right
       value: 
       objectReference: {fileID: 1977749788}
+    - target: {fileID: 5418483408872748277, guid: cab576dfa94d88f4dbcb516d62ed0057, type: 3}
+      propertyPath: m_Radius
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cab576dfa94d88f4dbcb516d62ed0057, type: 3}

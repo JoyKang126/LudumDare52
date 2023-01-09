@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    public void StartGame(int sceneID)
+    public AudioManager audioManager;
+    public void StartGame(string sceneName)
     {
         Time.timeScale = 1f;
         FindObjectOfType<AudioManager>().Play("button");
-        SceneManager.LoadScene(sceneID);
+        SceneManager.LoadScene(sceneName);
     }
 
     public void NextLevel()

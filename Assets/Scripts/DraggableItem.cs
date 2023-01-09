@@ -35,6 +35,7 @@ public class DraggableItem : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("choose");
         mouseDragStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.localScale = new Vector3(1,1,1);
+        lastRotation = transform.rotation;
         spriteDragStartPosition = transform.localPosition;
         lastPosition = transform.position;    
         foreach(Tile tile in snappedTo)
