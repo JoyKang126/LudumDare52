@@ -3231,10 +3231,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3948,8 +3948,7 @@ MonoBehaviour:
   - {fileID: 402103339}
   - {fileID: 2030931399}
   - {fileID: 1858780862}
-  snapRange: 0.5
-  audioManager: {fileID: 1164012284}
+  snapRange: 0.4
   levelClearWindow: {fileID: 1833194083}
 --- !u!4 &1605572065
 Transform:

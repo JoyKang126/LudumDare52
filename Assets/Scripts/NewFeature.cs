@@ -9,6 +9,7 @@ public class NewFeature : MonoBehaviour
 
     public void LevelClear()
     {
+        FindObjectOfType<AudioManager>().Play("button");
         levelClear.SetActive(false);
     }
 }

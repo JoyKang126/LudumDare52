@@ -7,8 +7,7 @@ public class SnapController : MonoBehaviour
 {
     public List<Tile> snapPoints;
     public List<DraggableItem> draggableObjects;
-    public float snapRange = 0.5f;
-    public AudioManager audioManager;
+    public float snapRange = 0.4f;
     public GameObject levelClearWindow;
 
     private bool tagClash;
@@ -44,12 +43,12 @@ public class SnapController : MonoBehaviour
         else
         {
             tagClash = false;
-            audioManager.Play("fart");
+            FindObjectOfType<AudioManager>().Play("fart");
         }
 
         if (closestSnapPoint != null && draggable.validSpot && draggable.CheckSnaps() && tagClash && closestDistance <= snapRange) //snap to new position
         {
-            audioManager.Play("snap");
+            FindObjectOfType<AudioManager>().Play("snap");
             Vector3 offset = draggable.transform.position - draggable.transform.GetChild(0).position;
             draggable.transform.position = closestSnapPoint.transform.position + offset;
 
@@ -58,7 +57,8 @@ public class SnapController : MonoBehaviour
             CheckEndState();
         }
         else if (!draggable.notInBarn) //go back to last position
-        {
+        {          
+            draggable.transform.rotation = draggable.lastRotation;
             //teleport, isn't triggering on triggerexit
             if (draggable.lastPosition == draggable.startPosition)
             {
@@ -75,6 +75,7 @@ public class SnapController : MonoBehaviour
         }
         else //go back to start position
         {
+            draggable.transform.rotation = draggable.startRotation;
             draggable.transform.localScale = new Vector3(0.7f,0.7f,1);
             draggable.transform.position = draggable.startPosition;
             draggable.snappedToLast.Clear();
