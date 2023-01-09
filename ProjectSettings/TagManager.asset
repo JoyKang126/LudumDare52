@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - banana
+  - radish
+  - ginger
+  - mushroom
+  - acorn
+  - onion
+  - pa
+  - tomato
+  - sausage
+  - apple
+  - goguma
   layers:
   - Default
   - TransparentFX

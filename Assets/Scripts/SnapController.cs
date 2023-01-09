@@ -7,7 +7,10 @@ public class SnapController : MonoBehaviour
 {
     public List<Tile> snapPoints;
     public List<DraggableItem> draggableObjects;
-    public float snapRange = 0.7f;
+    public float snapRange = 0.5f;
+    public AudioManager audioManager;
+
+    private bool tagClash;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +35,19 @@ public class SnapController : MonoBehaviour
             }
         }
 
-        if (closestSnapPoint != null && draggable.validSpot && draggable.CheckSnaps() && closestDistance <= snapRange)
+        if (draggable.CheckTags())
         {
+            tagClash = true;
+        }
+        else
+        {
+            tagClash = false;
+            audioManager.Play("fart");
+        }
+
+        if (closestSnapPoint != null && draggable.validSpot && draggable.CheckSnaps() && tagClash && closestDistance <= snapRange)
+        {
+            audioManager.Play("snap");
             Vector3 offset = draggable.transform.position - draggable.transform.GetChild(0).position;
             draggable.transform.position = closestSnapPoint.transform.position + offset;
 
@@ -44,12 +58,23 @@ public class SnapController : MonoBehaviour
         else if (!draggable.notInBarn)
         {
             //teleport, isn't triggering on triggerexit
+            if (draggable.lastPosition == draggable.startPosition)
+            {
+                draggable.transform.localScale = new Vector3(0.5f,0.5f,1);
+            }
             draggable.transform.position = draggable.lastPosition;
             foreach(Tile tile in draggable.snappedToLast)
             {
-                Debug.Log("na na na");
                 draggable.snappedTo.Add(tile);
+                tile.gameObject.GetComponent<Tile>().isOccupied = true;
+                tile.gameObject.GetComponent<Tile>().tiletag = draggable.transform.gameObject.tag;
             }
+            draggable.snappedToLast.Clear();
+        }
+        else
+        {
+            draggable.transform.localScale = new Vector3(0.5f,0.5f,1);
+            draggable.transform.position = draggable.startPosition;
             draggable.snappedToLast.Clear();
         }
     }
