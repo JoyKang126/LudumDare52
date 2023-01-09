@@ -64,6 +64,7 @@ public class DraggableItem : MonoBehaviour
     {
         gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
         isDragged = false;
+        //check if puzzle piece is completely in the barn, partially in barn, or not in barn at all
         if (collideWith.Count == size)
         {
             notInBarn = false;
