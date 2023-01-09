@@ -6,9 +6,11 @@ public class NewFeature : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameObject levelClear;
+    public AudioManager audioManager;
 
     public void LevelClear()
     {
+        audioManager.Play("button");
         levelClear.SetActive(false);
     }
 }
