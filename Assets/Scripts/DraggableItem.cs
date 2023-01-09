@@ -15,6 +15,7 @@ public class DraggableItem : MonoBehaviour
     public List<Collider2D> collideWith;
     public List<Tile> snappedTo;
     public List<Tile> snappedToLast;
+    public AudioManager audioMan;
     [SerializeField] private int size;
 
     public bool validSpot; 
@@ -29,6 +30,7 @@ public class DraggableItem : MonoBehaviour
     {
         isDragged = true;
         gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        audioMan.Play("choose");
         mouseDragStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.localScale = new Vector3(1,1,1);
         spriteDragStartPosition = transform.localPosition;

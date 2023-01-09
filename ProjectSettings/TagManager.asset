@@ -4,14 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - corn
-  - wheat
-  - apple
   - banana
-  - ham
-  - egg
-  - rice
-  - honey
+  - radish
+  - ginger
+  - mushroom
+  - acorn
+  - onion
+  - pa
+  - tomato
+  - sausage
+  - apple
+  - goguma
   layers:
   - Default
   - TransparentFX

@@ -13,20 +13,17 @@ public class Tile : MonoBehaviour
 
     public bool willTheyFight(string potag)
     {
-        Debug.Log(down.gameObject.tag);
         if (potag == "banana")
         {
-            if (top.tiletag == "apple" || left.tiletag == "apple" || right.tiletag == "apple" || down.tiletag == "apple")
+            if (top.tiletag == "onion" || left.tiletag == "onion" || right.tiletag == "onion" || down.tiletag == "onion")
             {
-                Debug.Log("no banana!");
                 return true;
             }
         }
-        else if (potag == "apple")
+        else if (potag == "onion")
         {
             if (top.tiletag =="banana" || left.tiletag == "banana" || right.tiletag == "banana" || down.tiletag == "banana")
             {
-                Debug.Log("no apple!");
                 return true;
             }
         }
