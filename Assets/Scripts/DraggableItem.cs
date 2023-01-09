@@ -13,10 +13,10 @@ public class DraggableItem : MonoBehaviour
     public Vector3 lastPosition;
     public Vector3 startPosition;
     public Quaternion lastRotation;
+    public Quaternion startRotation;
     public List<Collider2D> collideWith;
     public List<Tile> snappedTo;
     public List<Tile> snappedToLast;
-    public AudioManager audioMan;
     [SerializeField] private int size;
 
     public bool validSpot; 
@@ -25,13 +25,14 @@ public class DraggableItem : MonoBehaviour
     void Awake()
     {
         startPosition = transform.position;
+        startRotation  = transform.rotation;
     }
 
     private void OnMouseDown() 
     {
         isDragged = true;
         gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
-        audioMan.Play("choose");
+        FindObjectOfType<AudioManager>().Play("choose");
         mouseDragStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.localScale = new Vector3(1,1,1);
         lastRotation = transform.rotation;
