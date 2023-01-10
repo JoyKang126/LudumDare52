@@ -1929,7 +1929,7 @@ MonoBehaviour:
       - m_Target: {fileID: 434719887}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Quit
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2511,6 +2511,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 214096544}
     m_Modifications:
+    - target: {fileID: 1331394654229975290, guid: 60632c6224c7c3f4989baa2f15ac8813, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2065122532901127307, guid: 60632c6224c7c3f4989baa2f15ac8813, type: 3}
       propertyPath: m_Name
       value: radish_flip
@@ -4806,7 +4810,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: bgm
     clip: {fileID: 8300000, guid: 9b817ab2431cf5b4e9fd1d08cd06a9a7, type: 3}
-    volume: 0.1
+    volume: 0.15
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -6151,7 +6155,7 @@ SpriteRenderer:
   m_SortingLayerID: -1875788325
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ba72e1b3b211eb045a48b640be2a7c0e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f49dada12cbbad4cb054ebb764518b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

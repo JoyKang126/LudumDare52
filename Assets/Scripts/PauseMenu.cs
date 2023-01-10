@@ -25,6 +25,7 @@ public class PauseMenu : MonoBehaviour
   {
     Time.timeScale = 1f;
     FindObjectOfType<AudioManager>().Play("button");
+    Destroy(FindObjectOfType<AudioManager>().gameObject);
     SceneManager.LoadScene("StartScene");
   }
 }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        
+
         DontDestroyOnLoad(gameObject);
         foreach (Sound s in sounds)
         {
@@ -33,7 +34,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        Play("bgm");
+        Play("startscene");      
     }
 
     // Update is called once per frame
@@ -45,5 +46,15 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Play();
+    }
+
+    public void StopPlay (string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            return;
+        }
+        s.source.Stop();
     }
 }

@@ -14,6 +14,11 @@ public class SnapController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (SceneManager.GetActiveScene().name == "level1")
+        {
+            FindObjectOfType<AudioManager>().StopPlay("startscene");
+            FindObjectOfType<AudioManager>().Play("bgm");
+        }
         foreach(DraggableItem draggable in draggableObjects)
         {
             draggable.dragEndedCallback = OnDragEnded;
