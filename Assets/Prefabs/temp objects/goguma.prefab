@@ -101,10 +101,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lastPosition: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  lastRotation: {x: 0, y: 0, z: 0, w: 0}
+  startRotation: {x: 0, y: 0, z: 0, w: 0}
   collideWith: []
   snappedTo: []
   snappedToLast: []
-  audioMan: {fileID: 0}
   size: 5
   validSpot: 0
   notInBarn: 0

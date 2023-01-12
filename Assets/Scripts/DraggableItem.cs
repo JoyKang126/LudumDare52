@@ -21,6 +21,7 @@ public class DraggableItem : MonoBehaviour
 
     public bool validSpot; 
     public bool notInBarn;
+    public bool hittingBound;
 
     void Awake()
     {
@@ -103,6 +104,10 @@ public class DraggableItem : MonoBehaviour
     {
         foreach (Collider2D tile in collideWith)
         {
+            if (tile.gameObject.tag == "boundary")
+            {
+                continue;
+            }
             if (tile.gameObject.GetComponent<Tile>().isOccupied == true)
             {
                 return false; //tile already occupied
@@ -115,6 +120,10 @@ public class DraggableItem : MonoBehaviour
     {
         foreach (Collider2D tile in collideWith)
         {
+            if (tile.gameObject.tag == "boundary")
+            {
+                continue;
+            }
             if (tile.gameObject.GetComponent<Tile>().willTheyFight(gameObject.tag))
             {
                 return false; //can't be next to this tile
@@ -127,6 +136,10 @@ public class DraggableItem : MonoBehaviour
     {
         foreach (Collider2D tile in collideWith)
         {
+            if (tile.gameObject.tag == "boundary")
+            {
+                continue;
+            }
             tile.gameObject.GetComponent<Tile>().isOccupied = true;
             tile.gameObject.GetComponent<Tile>().tiletag = gameObject.tag;
             snappedTo.Add(tile.gameObject.GetComponent<Tile>());
@@ -137,6 +150,10 @@ public class DraggableItem : MonoBehaviour
     {
         foreach (Collider2D tile in collideWith)
         {
+            if (tile.gameObject.tag == "boundary")
+            {
+                continue;
+            }
             tile.gameObject.GetComponent<Tile>().isOccupied = false;
             tile.gameObject.GetComponent<Tile>().tiletag = "";
             snappedTo.Remove(tile.gameObject.GetComponent<Tile>());

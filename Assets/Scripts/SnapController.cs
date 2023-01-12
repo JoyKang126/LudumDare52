@@ -51,7 +51,7 @@ public class SnapController : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("fart");
         }
 
-        if (closestSnapPoint != null && draggable.validSpot && draggable.CheckSnaps() && tagClash && closestDistance <= snapRange) //snap to new position
+        if (closestSnapPoint != null && draggable.validSpot && !draggable.hittingBound && draggable.CheckSnaps() && tagClash && closestDistance <= snapRange) //snap to new position
         {
             FindObjectOfType<AudioManager>().Play("snap");
             Vector3 offset = draggable.transform.position - draggable.transform.GetChild(0).position;

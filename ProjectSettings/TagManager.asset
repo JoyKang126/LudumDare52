@@ -15,6 +15,7 @@ TagManager:
   - sausage
   - apple
   - goguma
+  - boundary
   layers:
   - Default
   - TransparentFX
